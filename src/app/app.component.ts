@@ -5,18 +5,25 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 
 import { HomePage }  from '../pages/home/home';
 import { AboutPage } from '../pages/about/about';
+import { MainPage }  from '../pages/main/main';
+
 @Component({
   templateUrl: 'app.html'
 })
+
 export class MyApp {
+
   @ViewChild('NAV') nav:Nav;
+  
   public rootPage:any;
   public pages:Array<{ titulo:string, component:any, icon:string}>;
+  
   constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen) {
     this.rootPage = HomePage;
     this.pages = [
       {titulo: 'Inicio',    component: HomePage,  icon: 'home'},
-      {titulo: 'Acerca de', component: AboutPage, icon: 'information-circle'}
+      {titulo: 'Acerca de', component: AboutPage, icon: 'information-circle'},
+      {titulo: 'Main',      component: MainPage,  icon: 'shirt'}
     ];
     platform.ready().then(() => {
       // Okay, so the platform is ready and our plugins are available.
