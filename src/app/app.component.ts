@@ -22,8 +22,8 @@ export class MyApp {
     this.rootPage = HomePage;
     this.pages = [
       {titulo: 'Inicio',    component: HomePage,  icon: 'home'},
-      {titulo: 'Acerca de', component: AboutPage, icon: 'information-circle'},
-      {titulo: 'Main',      component: MainPage,  icon: 'shirt'}
+      {titulo: 'Main',      component: MainPage,  icon: 'shirt'},
+      {titulo: 'Acerca de', component: AboutPage, icon: 'information-circle'}
     ];
     platform.ready().then(() => {
       // Okay, so the platform is ready and our plugins are available.
